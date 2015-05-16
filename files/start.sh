@@ -1,4 +1,5 @@
 #!/bin/bash
+# ./start.sh [PORT] [DOMAIN]
 cd /opt/mjproxy_1.7
 sed s/host_port=PORT/host_port=$1/g server.tmpl | sed s/domain_names=DNS/domain_names=$2/g > config/server.cfg
 ip a
